@@ -3,8 +3,7 @@ import Tree from "react-d3-tree";
 import "./App.css";
 import Drawer from "./components/Drawer";
 import { insertarValor, eliminarValor, actualizarValor, obtenerValores, vaciarArbol } from './services/api';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import toast, { Toaster } from 'react-hot-toast';
 
 const App = () => {
   const [valor, setValor] = useState("");
@@ -22,7 +21,7 @@ const App = () => {
     const data = await eliminarValor(valor);
     setMensaje(data.mensaje);
     setArbol(data.arbol);
-    toast.sucess(data.mensaje);
+    toast.success(data.mensaje);
   };
 
   const handleCambiar = async () => {
@@ -73,7 +72,7 @@ const App = () => {
       <button onClick={handleMostrar}>Mostrar</button>
       <button onClick={handleVaciar}>Vaciar</button>
       <p>{mensaje}</p> */}
-        <ToastContainer />
+        <Toaster />
         <Drawer 
           valor={valor}
           setValor={setValor}
