@@ -9,10 +9,25 @@
 }
 
 .drawer-header h2 {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 32px;
+    font-weight: 500;
     margin-bottom: 20px;
     color: #222;
+    text-align: center;
+}
+
+.drawer-header h3, a {
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #0177FD;
+    text-align: center;
+    transition: 0.5s ease-out;
+}
+
+.drawer-header a:hover {
+    color: #23527c;
+    text-decoration: underline;
 }
 
 .drawer-nav {

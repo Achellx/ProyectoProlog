@@ -1,5 +1,7 @@
 import React from "react";
 import "../styles/Drawer.css";
+import { FaBookBookmark } from "react-icons/fa6";
+
 
 const Drawer = ({
   valor, 
@@ -15,6 +17,14 @@ const Drawer = ({
     <div className="drawer">
       <div className="drawer-header">
         <h2>ABB Máximo</h2>
+      </div>
+      <div className="drawer-header">
+        <h3>
+          <a href="/public/MANUAL_PROGRAMADOR.pdf" target="_blank">
+          <FaBookBookmark />
+          API Docs (v1)
+          </a>
+        </h3>
       </div>
       <nav className="drawer-nav">
         <div className="drawer-item">
